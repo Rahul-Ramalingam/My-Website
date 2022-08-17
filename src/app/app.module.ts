@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ContactFormComponent } from './components/landing-page/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     AboutMeComponentComponent,
     ShowcaseComponentComponent,
     BlogComponentComponent,
-    BlogPageComponent
+    BlogPageComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,

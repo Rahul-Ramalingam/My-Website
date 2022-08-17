@@ -1,0 +1,32 @@
+<h1 mat-dialog-title class="contactFormTitle">E-Mail Me!</h1>
+<form>
+    <mat-form-field class="fullWidth" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="data.name" [formControl]="nameFormControl" required>
+        <mat-error *ngIf="nameFormControl.hasError('required')">
+            Your name is required to know who you are.
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field class="fullWidth" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput [(ngModel)]="data.email" [formControl]="emailFormControl" placeholder="Ex. something@example.com" required>
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is required to respond.
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field class="fullWidth" appearance="outline">
+        <mat-label>Your Message</mat-label>
+        <textarea matInput [(ngModel)]="data.message" [formControl]="messageFormControl" required></textarea>
+        <mat-error *ngIf="messageFormControl.hasError('required')">
+            Send something..!
+        </mat-error>
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+        <button mat-raised-button [disabled]="nameFormControl.hasError('required') || messageFormControl.hasError('required') || emailFormControl.hasError('required') || emailFormControl.hasError('email')" class="sendMessageButton" type="submit" [mat-dialog-close]="data">Send <i class="fa fa-comment icon"></i></button>
+        <button mat-raised-button class="closeButton" (click)="closeDialog()">Close <i class="fa fa-times icon"></i></button>
+    </div>
+</form>

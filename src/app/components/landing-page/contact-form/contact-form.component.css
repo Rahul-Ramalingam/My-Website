@@ -1,0 +1,26 @@
+.contactFormTitle {
+    font-size: 24px;
+    font-weight: bolder;
+    color: #FFC700;
+    letter-spacing: 1.5px;
+}
+
+.fullWidth {
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.icon {
+    margin-bottom: 3px;
+    margin-left: 5px;
+}
+
+.sendMessageButton {
+    background-color: #423869;
+    color: white;
+}
+
+.closeButton {
+    background-color: #ed3f51;
+    color: white;
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -6,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
+
+  name : string = "";
+  email: string = "";
+  message: string = "";
+
   roles:string[] = ["Full Stack Developer", "Flutter App Dev", "AI Enthusiast", "UI/UX Designer"]
   rolesPointer:number = 0
-  constructor() { }
+
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
     const colors = ["#00FFF0", "#D9D9D9", "#F45656", "#FF9900", "#FFC700"];
@@ -18,8 +26,19 @@ export class LandingPageComponent implements OnInit {
    },1000);   
   }
 
-  openContactForm(){
-    console.log("contact")
+  openDialog() {
+    const dialogRef = this.dialog.open(ContactFormComponent,
+      {
+        width: '450px',
+        enterAnimationDuration: '200ms',
+        exitAnimationDuration: '200ms',
+        data: { name:this.name, email:this.email, message:this.message }
+      }); 
+    dialogRef.afterClosed().subscribe(
+      result => {
+        console.log(result);
+      }
+    )
   }
 
   type($el:any, text:string, position:number) {
@@ -27,9 +46,9 @@ export class LandingPageComponent implements OnInit {
       var rchars = 'qwerty';
       if (position % 3 == 0 && Math.random() > 0.9) {
         var typo;
-        var chr = text.substr(position, 1);
+        var chr = text.substring(position, 1);
         if (chr == chr.toUpperCase()) { typo = chr.toLowerCase(); }
-        else { typo = rchars.substr(Math.floor(Math.random() * rchars.length), 1); }
+        else { typo = rchars.substring(Math.floor(Math.random() * rchars.length), 1); }
         $el.innerHTML = text.substring(0, position - 1) + typo + '_';
         setTimeout(() => { this.type($el, text, position - 1); }, 200)
       }
@@ -56,7 +75,7 @@ export class LandingPageComponent implements OnInit {
         setTimeout(() => { this.type($el, this.roles[this.rolesPointer], 0); }, 400)
       }      
     }
-  }
+  }  
 }
 
 function generateRandomParticles(numBalls: number, colors:string[]) {
