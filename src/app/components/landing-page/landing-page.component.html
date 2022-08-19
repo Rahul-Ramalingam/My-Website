@@ -6,26 +6,23 @@
                     <h1 class="nameStyle">Rahul<span style="color:#F45656;">.</span></h1>
                     <p class="tagStyle">I'm a <span id="replace"></span></p>
                     <div class="iconStyle">
-                        <i class="fa fa-twitter"></i>
-                        <i class="fa fa-github"></i>
-                        <i class="fa fa-linkedin"></i>
-                        <i class="fa fa-envelope"></i>
+                        <a class="fa fa-twitter" href="#" target="_blank" rel="noopener noreferrer"></a>
+                        <a class="fa fa-github" href="https://github.com/Rahul-Ramalingam" target="_blank" rel="noopener noreferrer"></a>
+                        <a class="fa fa-linkedin" href="https://www.linkedin.com/in/rahul-ram-30122000" target="_blank" rel="noopener noreferrer"></a>
+                        <a class="fa fa-comment tooltip" (click)="openDialog()">
+                            <span class="tooltiptext">Ping Me..!</span>
+                        </a>
                     </div>
-                    <button mat-raised-button class="buttonStyle" (click)="openDialog()">Let's be friends</button>
+                    <button mat-raised-button class="buttonStyle" routerLink="/aboutme">More about me &nbsp;<i class="fa fa-arrow-right"></i></button>
                 </div>
-                <span></span>
+                <!-- <span></span>
                 <div style="display:flex; flex-direction:row;">
                     <div style="display:flex; flex-direction:column;">
                         <a class="routeStyle" routerLink="/aboutme">Know about me</a>
-                        <a class="routeStyle" routerLink="/blog">I share my knowledge here</a>
+                        <a class="routeStyle" routerLink="/blog">Read my blog</a>
                         <a class="routeStyle" routerLink="/showcase">My Showcase</a>
                     </div>
-                    <div style="display:flex; flex-direction:column;">
-                        <i class="fa fa-arrow-right routeStyle" routerLink="/aboutme"></i>
-                        <i class="fa fa-arrow-right routeStyle" routerLink="/blog"></i>
-                        <i class="fa fa-arrow-right routeStyle" routerLink="/showcase"></i>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

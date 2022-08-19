@@ -1,7 +1,7 @@
 .contactFormTitle {
     font-size: 24px;
     font-weight: bolder;
-    color: #FFC700;
+    color: #1e1e1e;
     letter-spacing: 1.5px;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .sendMessageButton {
-    background-color: #423869;
+    background-color: #1e1e1e;
     color: white;
 }
 

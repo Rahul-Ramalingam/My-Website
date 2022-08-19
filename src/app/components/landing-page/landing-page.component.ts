@@ -13,12 +13,13 @@ export class LandingPageComponent implements OnInit {
   email: string = "";
   message: string = "";
 
-  roles:string[] = ["Full Stack Developer", "Flutter App Dev", "AI Enthusiast", "UI/UX Designer"]
+  roles:string[] = ["Full Stack Developer", "Flutter App Dev", "AI Enthusiast"]
   rolesPointer:number = 0
 
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    document.body.style.overflow = 'hidden';
     const colors = ["#00FFF0", "#D9D9D9", "#F45656", "#FF9900", "#FFC700"];
     generateRandomParticles(25,colors);
     setTimeout(() =>{     

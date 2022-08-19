@@ -13,8 +13,6 @@ export class AppComponent {
   constructor(private router: Router){
     console.log(router.url);
     this.currentUrl = router.url;
-    if (this.currentUrl == "/") {
-      document.body.style.overflow = 'hidden';
-    }
+    if (this.currentUrl == "/") {}
     }
 }
