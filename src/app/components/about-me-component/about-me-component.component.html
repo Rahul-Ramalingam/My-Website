@@ -1,8 +1,83 @@
 <section>
-    <div style="margin-left: 1.5%; margin-top: 5%;display: flex; flex-direction: row;">
-        <i class="fa fa-arrow-left routeStyle" style="font-size:24px; color: white; padding-right: 40px;" routerLink="/"></i>
-        <div style="font-size: 36px; font-weight: bolder; color: white;">
-            About Me
+    <div style="display: flex; flex-direction:row;">
+        <div style="padding-right: 30px;">
+            <div class="topBar">
+                <i class="fa fa-arrow-left back" routerLink="/"></i>
+                <div class="pageTitle" style="font-size: 40px; font-weight: bolder; color: white; padding-left: 20%;">
+                    ME
+                </div>
+            </div>
+            <mat-card mat-card-avatar class="avatar"></mat-card>
         </div>
+        <mat-card class="mat-elevation-z2 aboutCard">
+            <mat-card-header>
+                <mat-card-title>
+                    <h3>Self Intro..</h3>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div style="margin-left:15px; font-size: 15px; font-weight: 500; letter-spacing: 0.6px;">
+                    Coimbatore, Tamil Nadu, India.. yeah that's where I live currently. I'm a person with creative thoughts and can effortlessly adapt to a new environment. I am a great believer in hard work over luck.
+                </div>
+                <h3 style="margin-left:15px;">My Skills</h3>
+                <div class="skills">
+                    <ul>
+                        <li><img src="assets/images/icons/CSharp.png" alt="" class="iconStyle"></li>
+                        <li><img src="assets/images/icons/dotNet.png" alt="" class="iconStyle"></li>
+                        <li><img src="assets/images/icons/python.png" alt="" class="iconStyle"></li>
+                        <li><img src="assets/images/icons/sql.png" alt="" class="iconStyle"></li>
+                        <li><img src="assets/images/icons/mongoDb.png" alt="" class="iconStyle"></li>
+                        <li><img src="assets/images/icons/htmlCss.png" alt="" class="iconStyle"></li>
+                        <li><img src="assets/images/icons/javascript.png" alt="" class="iconStyle"></li>
+                        <li><img src="assets/images/icons/jquery.png" alt="" class="iconStyle"></li>
+                        <li><img src="assets/images/icons/angular.png" alt="" class="iconStyle"></li>
+                        <li><img src="assets/images/icons/flutter.png" alt="" class="iconStyle"></li>
+                        <li><img src="assets/images/icons/git.png" alt="" class="iconStyle"></li>
+                        <li><img src="assets/images/icons/opencv.png" alt="" class="iconStyle"></li>
+                        <li><img src="assets/images/icons/pytorch.png" alt="" class="iconStyle"></li>
+                        <li><img src="assets/images/icons/scikit.png" alt="" class="iconStyle"></li>
+                    </ul>
+                </div>
+            </mat-card-content>
+
+            <mat-card-actions style="margin-left:15px;">
+                <button mat-raised-button class="buttonStyle">My Resume &nbsp;<i class="fa fa-download" routerLink="/"></i></button>
+            </mat-card-actions>
+        </mat-card>
+        <mat-card class="mat-elevation-z2 timeLine scrollable-content">
+            <mat-card-header>
+                <mat-card-title>
+                    <h3>Timeline</h3>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content style="margin-left:10px">
+                <div class="container">
+                    <div class="wrapper">
+                        <ul class="sessions">
+                            <li>
+                                <div class="time">2022 - present</div>
+                                <p>I'm working as a software development engineer at Cloud Assert..</p>
+                            </li>
+                            <li>
+                                <div class="time">2018 - 2022</div>
+                                <p>I did my under graduation at KPRIEnT in the stream of Computer Science and Engineering. 🦅</p>
+                            </li>
+                            <li>
+                                <div class="time">2016 - 2018</div>
+                                <p>I did my higher secondary schooling at GRG. 🕊️</p>
+                            </li>
+                            <li>
+                                <div class="time">2003 - 2016</div>
+                                <p>I did my primary and secondary schooling at GRN. 🐥</p>
+                            </li>
+                            <li>
+                                <div class="time">30 Dec 2000</div>
+                                <p>My Birthday.. 🐣</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
     </div>
 </section>

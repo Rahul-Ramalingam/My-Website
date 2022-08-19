@@ -1,0 +1,43 @@
+.settings-card {
+    height: 200px;
+    width: 350px;
+    margin: 15px;
+    border-radius: 10px;
+    color: white;
+    background-color: #fefefe10;
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+}
+
+.mat-card {
+    padding: 20px;
+}
+
+.padRight {
+    display: grid;
+    float: right;
+    text-align: right;
+}
+
+.buttonStyle {
+    background-color: #D43546;
+    color: white;
+    border-color: transparent;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.buttonStyle:hover {
+    background-color: #ffb340;
+    color: #1e1e1e;
+    cursor: pointer;
+    transition: 0.5s;
+}

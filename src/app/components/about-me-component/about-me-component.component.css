@@ -1,0 +1,156 @@
+.topBar {
+    margin-left: 10%;
+    margin-top: 25%;
+    display: flex;
+    flex-direction: row;
+}
+
+.back {
+    font-size: 24px;
+    color: white;
+    padding-right: 40px;
+    padding-top: 3px;
+    transition: 0.5s;
+}
+
+.back:hover {
+    font-size: 34px;
+    color: #ffb340;
+    cursor: pointer;
+    padding-top: 0px;
+    transition: 0.5s;
+}
+
+.avatar {
+    margin-top: 30px;
+    margin-left: 20%;
+    background-image: url('../../../assets/images/profile_pic.JPG');
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+
+.aboutCard {
+    margin: 3% 3% 0% 3%;
+    background-color: #ffffff18;
+    color: white;
+    border-radius: 20px;
+    width: 35%;
+}
+
+.timeLine {
+    margin: 3% 3% 0% 0%;
+    background-color: #ffffff18;
+    color: white;
+    border-radius: 20px;
+    height: 320px;
+    width: 35%;
+}
+
+.mat-card.scrollable-content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-card.scrollable-content>.mat-card-title-group {
+    display: block;
+}
+
+.mat-card.scrollable-content>.mat-card-content {
+    overflow-y: auto;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessions {
+    position: relative;
+}
+
+.sessions li {
+    padding-bottom: 2rem;
+    border-left: 3px solid #ffffff51;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.sessions li :last-child {
+    border: 0px;
+    padding-bottom: 0;
+}
+
+.sessions li::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: #ffb340;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+}
+
+.time {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.buttonStyle {
+    background-color: #D43546;
+    color: white;
+    border-color: transparent;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.buttonStyle:hover {
+    background-color: #ffb340;
+    color: #1e1e1e;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.skills {
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.skills ul {
+    list-style-type: none;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.skills li {
+    display: inline;
+    padding-right: 100px;
+}
+
+.skills ::-webkit-scrollbar {
+    height: 8px;
+}
+
+.iconStyle {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}

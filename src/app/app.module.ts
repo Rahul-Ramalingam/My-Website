@@ -19,6 +19,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ContactFormComponent } from './components/landing-page/contact-form/contact-form.component';
+import {MatCardModule} from '@angular/material/card';
+import { ProjectShowcaseComponent } from './components/about-me-component/project-showcase/project-showcase.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { ContactFormComponent } from './components/landing-page/contact-form/con
     ShowcaseComponentComponent,
     BlogComponentComponent,
     BlogPageComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    ProjectShowcaseComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,9 @@ import { ContactFormComponent } from './components/landing-page/contact-form/con
     MatIconModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
