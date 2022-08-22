@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 
@@ -7,7 +7,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.css']
 })
-export class LandingPageComponent implements OnInit {
+export class LandingPageComponent implements OnInit, OnDestroy {
 
   name : string = "";
   email: string = "";
@@ -25,6 +25,10 @@ export class LandingPageComponent implements OnInit {
     setTimeout(() =>{     
       this.type(document.getElementById('replace'), this.roles[this.rolesPointer],0);
    },1000);   
+  }
+
+  ngOnDestroy(): void {
+    document.body.style.overflow = 'visible';
   }
 
   openDialog() {
@@ -45,7 +49,7 @@ export class LandingPageComponent implements OnInit {
   type($el:any, text:string, position:number) {
     if (text.length >= position) {
       var rchars = 'qwerty';
-      if (position % 3 == 0 && Math.random() > 0.9) {
+      if (position % 3 == 0 && Math.random() > 0.7) {
         var typo;
         var chr = text.substring(position, 1);
         if (chr == chr.toUpperCase()) { typo = chr.toLowerCase(); }
@@ -76,7 +80,7 @@ export class LandingPageComponent implements OnInit {
         setTimeout(() => { this.type($el, this.roles[this.rolesPointer], 0); }, 400)
       }      
     }
-  }  
+  }
 }
 
 function generateRandomParticles(numBalls: number, colors:string[]) {
