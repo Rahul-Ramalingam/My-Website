@@ -22,6 +22,8 @@ import { ContactFormComponent } from './components/landing-page/contact-form/con
 import {MatCardModule} from '@angular/material/card';
 import { ProjectShowcaseComponent } from './components/about-me-component/project-showcase/project-showcase.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { ProjectMoreInfoComponent } from './components/about-me-component/project-showcase/project-more-info/project-more-info.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     BlogComponentComponent,
     BlogPageComponent,
     ContactFormComponent,
-    ProjectShowcaseComponent
+    ProjectShowcaseComponent,
+    ProjectMoreInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatButtonModule,
     MatDialogModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

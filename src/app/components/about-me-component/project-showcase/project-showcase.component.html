@@ -13,7 +13,7 @@
                         {{project.description}}
                     </mat-card-content>
                     <mat-card-actions align="end">
-                        <button class="buttonStyle" mat-raised-button>Read More</button>
+                        <button class="buttonStyle" mat-raised-button (click)="openDialog(project.id)">Read More</button>
                     </mat-card-actions>
                 </mat-card>
             </mat-grid-list>
