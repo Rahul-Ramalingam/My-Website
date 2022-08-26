@@ -68,7 +68,7 @@ export class ProjectShowcaseComponent implements OnInit {
       projectName:"Test Project5",
       description:"qwr hjiod aklnlknvsa kldkhf iasop dgnklasdkgn ihnoias hngio;rkn,mlsdkj gfkop;avnfklnknga isopgnronboia;sdhigi   oas;bndklnkfangkla;fsd  gknkksangl;asdkgnasdkglas;likhnjkl;akhjkl;asdgkn",
       techStackUsed:["python","SQL","OpenCV"],
-      demoImageLinks:[{path:"https://www.w3schools.com/images/w3schools_green.jpg"},{path:"https://www.w3schools.com/images/w3schools_green.jpg"},{path:"https://www.w3schools.com/images/w3schools_green.jpg"}]
+      demoImageLinks:[{path:"https://cdn.theatlantic.com/media/img/photo/2020/11/montana-photos/a01_23355789779-1/original.jpg"},{path:"https://www.dertour.de/optimized_img/SFxtt47PO8-THZgg-hsM-bb1hjg=/600x0/https%3A%2F%2Fwww.dertour.de%2Fdam%2Fjcr%3A7842d7bb-36ee-4f55-b33e-6a250358279c%2Fmontana-st-mary-lake-p-mu30666.jpg"},{path:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ1lpQRowqF_JWPg6qitJ_ClUn0hR0pWs4wefQjGTGeISS2xGdGQRBzyQJ6DB2lk3vODQ&usqp=CAU"}, {path:"https://www.latitudeslife.com/wp-content/uploads/montana-glacier-national-park-tramonto-lago.jpg"}, {path: "https://visitusa.nl/wp-content/uploads/2020/08/20090915-DSC_9306.jpg"}]
     }
   ]
 }
