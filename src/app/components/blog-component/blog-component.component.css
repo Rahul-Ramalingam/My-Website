@@ -1,0 +1,44 @@
+.topBar {
+    margin-left: 10px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.back {
+    font-size: 24px;
+    color: white;
+    padding-right: 40px;
+    padding-top: 3px;
+    transition: 0.5s;
+}
+
+.back:hover {
+    font-size: 34px;
+    color: #ffb340;
+    cursor: pointer;
+    padding-top: 0px;
+    transition: 0.5s;
+}
+
+.hashTagFilter {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 25px;
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
+.hashTagFilter :hover {
+    cursor: pointer;
+    color: #ffb340;
+}
+
+.tag {
+    padding: 10px;
+    color: white;
+}
+
+.tag :hover {
+    color: #ffb340;
+}
