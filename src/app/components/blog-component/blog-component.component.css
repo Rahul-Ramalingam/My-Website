@@ -21,6 +21,56 @@
     transition: 0.5s;
 }
 
+.titleFont {
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    width: 300px;
+}
+
+.alignContentCenter {
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.blogListCard {
+    height: 70vh;
+    overflow-y: scroll;
+    background-color: #ffffff18;
+}
+
+.blogCard {
+    padding: 15px;
+    max-width: 90vh;
+    background-color: #0000004b;
+    color: white;
+    border-radius: 15px;
+}
+
+.blogHashTag {
+    padding-right: 5px;
+    color: #ffb340;
+}
+
+.blogSummary {
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.blogMetaData {
+    padding: 0px 0px 5px 10px;
+}
+
+.hashTagTitle {
+    color: white;
+}
+
+.hasTagCard {
+    background-color: #ffffff18;
+    margin-left: 50px;
+}
+
 .hashTagFilter {
     display: grid;
     grid-template-columns: auto auto;
@@ -41,4 +91,8 @@
 
 .tag :hover {
     color: #ffb340;
+}
+
+.fontWeight500 {
+    font-weight: 500;
 }

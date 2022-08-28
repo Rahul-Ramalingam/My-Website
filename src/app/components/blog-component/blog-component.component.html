@@ -1,42 +1,36 @@
-<section style="padding:10px;">
-    <div style="display: flex; flex-direction:row;">
-        <div style="padding-right: 30px;">
-            <div class="topBar">
-                <i class="fa fa-arrow-left back" routerLink="/"></i>
-                <div style="font-size: 40px; font-weight: bolder; color: white; width: 300px;">
-                    Rahul's Blog
-                </div>
+<section class="padding-10">
+    <div class="flexDirectionRow">
+        <div class="topBar">
+            <i class="fa fa-arrow-left back" routerLink="/"></i>
+            <div class="titleFont">
+                Rahul's Blog
             </div>
         </div>
     </div>
-    <div class="" style="padding: 30px; display: flex; flex-direction: row; align-items: flex-start; justify-content: center;">
-        <mat-card style="height:70vh; overflow-y:scroll; background-color: #ffffff18;">
-            <div *ngFor="let blog of blogs" style="padding:15px;">
-                <mat-card style="padding:15px; max-width: 70vh;">
-                    <mat-card-title>
+    <div class="flexDirectionRow padding-30 alignContentCenter">
+        <mat-card class="blogListCard">
+            <div *ngFor="let blog of blogs" class="padding-15">
+                <mat-card mat-elevation-z4 class="padding-15 blogCard">
+                    <mat-card-title style="font-size: 30px;">
                         {{blog.title}}
                     </mat-card-title>
-                    <mat-card-content style="height: 50%;">
-                        <div style="display:flex; flex-direction:row; padding-bottom: 10px;">
-                            <span *ngFor="let tag of blog.hashtags" style="padding-right: 5px;">#{{tag}}</span>
+                    <mat-card-content>
+                        <div class="flexDirectionRow padding-bottom-10">
+                            <span *ngFor="let tag of blog.hashtags" class="blogHashTag">#{{tag}}</span>
                         </div>
-                        <div style="display: flex; flex-direction:column;">
-                            <p>{{blog.summary}}</p>
-                        </div>
+                        <p class="blogSummary">{{blog.summary}}</p>
                     </mat-card-content>
                     <mat-card-actions align="start">
-                        <div style="display: flex; flex-direction:row;">
-                            <div style="display: flex; flex-direction:column;">
-                                <span style="padding: 0px 0px 5px 5px;"><b>Read time:</b> {{blog.readTime}}</span>
-                                <span style="padding: 0px 0px 5px 5px;"><b>Last updated on:</b> {{blog.updatedTime}}</span>
-                            </div>
+                        <div class="flexDirectionColumn">
+                            <span class="blogMetaData"><span class="fontWeight500">Read time:</span>&nbsp;&nbsp;{{blog.readTime}}</span>
+                            <span class="blogMetaData"><span class="fontWeight500">Last updated on:</span>&nbsp;&nbsp;{{blog.updatedTime}}</span>
                         </div>
                     </mat-card-actions>
                 </mat-card>
             </div>
         </mat-card>
-        <mat-card style="background-color:#ffffff18; margin-left: 50px;">
-            <mat-card-title style="color: white;">
+        <mat-card class="hasTagCard">
+            <mat-card-title class="fontColorWhite">
                 #HashTags
             </mat-card-title>
             <mat-card-content class="hashTagFilter">
