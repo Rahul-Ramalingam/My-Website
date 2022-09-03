@@ -25,6 +25,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { ProjectMoreInfoComponent } from './components/about-me-component/project-showcase/project-more-info/project-more-info.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import {MatDividerModule} from '@angular/material/divider';
+import { BlogDetailsComponentComponent } from './components/blog-component/blog-details-component/blog-details-component.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatDividerModule} from '@angular/material/divider';
     BlogPageComponent,
     ContactFormComponent,
     ProjectShowcaseComponent,
-    ProjectMoreInfoComponent
+    ProjectMoreInfoComponent,
+    BlogDetailsComponentComponent
   ],
   imports: [
     BrowserModule,
