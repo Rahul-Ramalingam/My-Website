@@ -18,6 +18,10 @@ export class BlogComponentComponent implements OnInit {
     console.log(this.blogs);
   }
 
+  navigateToDetailedBlogView(blogId?:number){
+    console.log(blogId);
+  }
+
   filterBlogList(tag:string){
     console.log(tag);
   }

@@ -47,6 +47,10 @@
     border-radius: 15px;
 }
 
+.blogCard:hover {
+    cursor: pointer;
+}
+
 .blogHashTag {
     padding-right: 5px;
     color: #ffb340;
