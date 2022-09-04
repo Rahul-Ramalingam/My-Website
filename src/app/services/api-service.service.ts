@@ -45,7 +45,16 @@ export class ApiServiceService {
    * getBlogDetails
     id:number   */
   public getBlogDetails(id:number): BlogDetailedViewModel {
-    let html = "";
+    let html = '<h1><strong>Angular DI: Using Inject Instead of Constructor</strong></h1><p><br></p><p><img src="https://miro.medium.com/max/875/1*CqmldfbX8ehI67U0XNqf-w.png"></p><p><br></p><p><span style="color: rgb(41, 41, 41);">As we learned in my&nbsp;</span><a href="https://netbasal.com/unleash-the-power-of-di-functions-in-angular-2eb9f2697d66" target="_blank" style="color: inherit; background-color: rgb(255, 255, 255);">previous</a><span style="color: rgb(41, 41, 41);">&nbsp;article, we can now use the&nbsp;</span><code style="color: rgb(41, 41, 41); background-color: rgb(242, 242, 242);">inject()</code><span style="color: rgb(41, 41, 41);">&nbsp;function inside components, directives, and pipes. Here are the reasons I chose it over the&nbsp;</span><code style="color: rgb(41, 41, 41); background-color: rgb(242, 242, 242);">constructor</code><span style="color: rgb(41, 41, 41);">&nbsp;for dependency injection. The first thing I noticed is that it is cleaner and more readable:</span></p><p><br></p><pre class="ql-syntax" spellcheck="false">export class AppComponent \
+    \{\
+      constructor(\
+        @Inject(FOO) private foo: string,\
+        @Optional() @Inject(BAR) private bar: string | null,\
+        private http: HttpClient,\
+        private todosService: TodosService\
+      ) { }\
+    }\
+  </pre><p><br></p><p><br></p>;';
     let blogDetails = new BlogDetailedViewModel();
     blogDetails.innerHtml = html;
     return blogDetails;

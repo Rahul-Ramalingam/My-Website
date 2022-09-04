@@ -34,7 +34,5 @@
 }
 
 .blogListCard {
-    height: 70vh;
-    overflow-y: scroll;
-    background-color: #ffffff18;
+    background-color: #ffffff;
 }

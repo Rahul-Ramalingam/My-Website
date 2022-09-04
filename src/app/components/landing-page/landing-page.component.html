@@ -3,7 +3,7 @@
         <div class="centerAlignContent">
             <div class="centerAlignItems">
                 <div style="display:flex; align-items:center; flex-direction: column; margin-bottom: 30px;">
-                    <h1 class="nameStyle">Rahul<span style="color:#F45656;">.</span></h1>
+                    <h1 class="nameStyle" [ngClass]="{'moblieNameLayout':isMobilePhone}">Rahul<span style="color:#F45656;">.</span></h1>
                     <p class="tagStyle">I'm a <span id="replace"></span></p>
                     <div class="iconStyle">
                         <a class="fa fa-newspaper-o tooltip" routerLink="/blog">

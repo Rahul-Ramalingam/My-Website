@@ -26,8 +26,16 @@ div.centerAlignItems>span {
     color: white;
     font-weight: bolder;
     position: relative;
-    font-size: 5.5rem;
+    font-size: 80px;
     margin-left: 0.2rem;
+}
+
+.nameStyle.moblieNameLayout {
+    font-size: 60px;
+}
+
+body {
+    overflow: hidden!important;
 }
 
 .tagStyle {
@@ -184,4 +192,9 @@ a {
     100% {
         transform: translateY(1px);
     }
+}
+
+html,
+body {
+    overflow: hidden
 }

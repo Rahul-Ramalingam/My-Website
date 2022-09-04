@@ -1,6 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-landing-page',
@@ -9,6 +11,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 })
 export class LandingPageComponent implements OnInit, OnDestroy {
 
+  isMobilePhone:boolean = false;
+
   name : string = "";
   email: string = "";
   message: string = "";
@@ -16,15 +20,29 @@ export class LandingPageComponent implements OnInit, OnDestroy {
   roles:string[] = ["Full Stack Developer", "Flutter App Dev", "AI Enthusiast"]
   rolesPointer:number = 0
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private _layoutObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
     document.body.style.overflow = 'hidden';
+
+    var landing_page = document.getElementById("landing_page");
+    if (landing_page) {
+      landing_page.style.overflow = 'hidden';
+    }
+    
+
     const colors = ["#00FFF0", "#D9D9D9", "#F45656", "#FF9900", "#FFC700"];
     generateRandomParticles(25,colors);
     setTimeout(() =>{     
       this.type(document.getElementById('replace'), this.roles[this.rolesPointer],0);
-   },1000);   
+   },1000); 
+   
+   this._layoutObserver.observe(Breakpoints.Handset)
+   .subscribe(result => {
+      if (result.matches) {
+        this.isMobilePhone = true;
+      }
+   })
   }
 
   ngOnDestroy(): void {
@@ -100,7 +118,11 @@ function generateRandomParticles(numBalls: number, colors:string[]) {
       ball.style.borderRadius = `100%`;
       ball.style.opacity = `0.7`;
       balls.push(ball);
-      document.getElementById("landing_page")?.append(ball);
+      var landing_page = document.getElementById("landing_page");
+      landing_page?.append(ball);
+      if(landing_page){
+        landing_page.style.overflow = 'hidden';
+      }
     }
 
     // animation
