@@ -17,32 +17,28 @@ export class LandingPageComponent implements OnInit, OnDestroy {
   email: string = "";
   message: string = "";
 
-  roles:string[] = ["Full Stack Developer", "Flutter App Dev", "AI Enthusiast"]
-  rolesPointer:number = 0
+  roles:string[] = ["Full Stack Developer", "Flutter App Dev", "AI Enthusiast"];
+  rolesPointer:number = 0;
+  numberOfParticles:number = 25;
 
   constructor(public dialog: MatDialog, private _layoutObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
     document.body.style.overflow = 'hidden';
 
-    var landing_page = document.getElementById("landing_page");
-    if (landing_page) {
-      landing_page.style.overflow = 'hidden';
-    }
-    
-
-    const colors = ["#00FFF0", "#D9D9D9", "#F45656", "#FF9900", "#FFC700"];
-    generateRandomParticles(25,colors);
-    setTimeout(() =>{     
-      this.type(document.getElementById('replace'), this.roles[this.rolesPointer],0);
-   },1000); 
-   
-   this._layoutObserver.observe(Breakpoints.Handset)
+    this._layoutObserver.observe(Breakpoints.Handset)
    .subscribe(result => {
       if (result.matches) {
+        this.numberOfParticles = 15;
         this.isMobilePhone = true;
       }
    })
+
+    const colors = ["#00FFF0", "#D9D9D9", "#F45656", "#FF9900", "#FFC700"];
+    generateRandomParticles(this.numberOfParticles, colors, this.isMobilePhone);
+    setTimeout(() =>{     
+      this.type(document.getElementById('replace'), this.roles[this.rolesPointer],0);
+   },1000);
   }
 
   ngOnDestroy(): void {
@@ -101,16 +97,18 @@ export class LandingPageComponent implements OnInit, OnDestroy {
   }
 }
 
-function generateRandomParticles(numBalls: number, colors:string[]) {
+function generateRandomParticles(numBalls: number, colors:string[], isMobilePhone:boolean) {
   const balls = [];
 
     //create partices
     for (let i = 0; i < numBalls; i++) {
+      let ballPositionL = isMobilePhone ? Math.floor(Math.random() * 100)/1.1 : Math.floor(Math.random() * 100);
+      let ballPositionT = isMobilePhone ? Math.floor(Math.random() * 100)/1.1 : Math.floor(Math.random() * 100);
       let ball = document.createElement("div");
       ball.classList.add("ball");
       ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-      ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-      ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+      ball.style.left = `${ballPositionL}vw`;
+      ball.style.top = `${ballPositionT}vh`;
       ball.style.transform = `scale(${Math.random()*1.2})`;
       ball.style.width = `${Math.random()*2}em`;
       ball.style.height = ball.style.width;
@@ -127,9 +125,13 @@ function generateRandomParticles(numBalls: number, colors:string[]) {
 
     // animation
     balls.forEach((el, i, ra) => {
+      let toX = Math.random() * (i % 2 === 0 ? -11 : 11);
+      let toY = Math.random() * 12;
+      let duration = isMobilePhone ? 10000 : 20000;
+
       let to = {
-        x: Math.random() * (i % 2 === 0 ? -11 : 11),
-        y: Math.random() * 12
+        x: toX,
+        y: toY
       };
 
       let anim = el.animate(
@@ -138,7 +140,7 @@ function generateRandomParticles(numBalls: number, colors:string[]) {
           { transform: `translate(${to.x}vw, ${to.y}vh)` }
         ],
         {
-          duration: (Math.random() + 1) * 20000,
+          duration: (Math.random() + 1) * duration,
           direction: "alternate",
           fill: "both",
           iterations: Infinity,

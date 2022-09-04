@@ -4,18 +4,18 @@
             <div class="centerAlignItems">
                 <div style="display:flex; align-items:center; flex-direction: column; margin-bottom: 30px;">
                     <h1 class="nameStyle" [ngClass]="{'moblieNameLayout':isMobilePhone}">Rahul<span style="color:#F45656;">.</span></h1>
-                    <p class="tagStyle">I'm a <span id="replace"></span></p>
-                    <div class="iconStyle">
+                    <p class="tagStyle" [ngClass]="{'moblieTagLayout':isMobilePhone}">I'm a <span id="replace"></span></p>
+                    <div class="iconStyle" [ngClass]="{'mobileIcons':isMobilePhone}">
                         <a class="fa fa-newspaper-o tooltip" routerLink="/blog">
                             <span class="blogTooltiptext">My Blog</span>
                         </a>
                         <a class="fa fa-github" href="https://github.com/Rahul-Ramalingam" target="_blank" rel="noopener noreferrer"></a>
                         <a class="fa fa-linkedin" href="https://www.linkedin.com/in/rahul-ram-30122000" target="_blank" rel="noopener noreferrer"></a>
                         <a class="fa fa-comment tooltip" (click)="openDialog()">
-                            <span class="tooltiptext">Ping Me..!</span>
+                            <span class="tooltiptext" [ngClass]="{'mobile':isMobilePhone}">Ping Me..!</span>
                         </a>
                     </div>
-                    <button mat-raised-button class="buttonStyle" routerLink="/aboutme">More about me &nbsp;<i class="fa fa-arrow-right"></i></button>
+                    <button mat-raised-button class="buttonStyle" [ngClass]="{'mobile':isMobilePhone}" routerLink="/aboutme">More about me &nbsp;<i class="fa fa-arrow-right"></i></button>
                 </div>
                 <!-- <span></span>
                 <div style="display:flex; flex-direction:row;">
